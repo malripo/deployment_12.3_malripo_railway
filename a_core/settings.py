@@ -55,9 +55,13 @@ else:
 # CSRF_TRUSTED_ORIGINS =[ 'https://*.onrender.com',
 #                         'https://*.ttugttag.sbs/', 'https://ttugttag.sbs/',]
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1',
-                 'huttag.up.railway.app',]
-CSRF_TRUSTED_ORIGINS =['https://huttag.up.railway.app/']
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1',
+#                  'huttag.up.railway.app',]
+# CSRF_TRUSTED_ORIGINS =['https://huttag.up.railway.app/']
+
+CSRF_TRUSTED_ORIGINS = [ 'huttag.up.railway.app' ]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+CSRF_COOKIE_SECURE = True
 
 INTERNAL_IPS = (
     '127.0.0.1',
