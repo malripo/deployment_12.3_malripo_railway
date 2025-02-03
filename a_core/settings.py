@@ -60,7 +60,7 @@ ALLOWED_HOSTS = ["*"]
 
 # CSRF_TRUSTED_ORIGINS = [ 'huttag.up.railway.app' ]
 # SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-# CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 INTERNAL_IPS = (
     '127.0.0.1',
