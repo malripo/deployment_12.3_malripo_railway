@@ -44,7 +44,7 @@ ENCRYPT_KEY = env('ENCRYPT_KEY')
 if ENVIRONMENT == 'development':
     DEBUG = True
 else:
-    DEBUG = False
+    DEBUG = True
 
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ["*"]
