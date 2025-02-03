@@ -47,7 +47,7 @@ else:
     DEBUG = False
 
 # ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', env("RENDER_EXTERNAL_HOSTNAME"),
 #                  'www.ttugttag.sbs','ttugttag.sbs',]
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1',
@@ -59,9 +59,9 @@ else:
 #                  'huttag.up.railway.app',]
 # CSRF_TRUSTED_ORIGINS =['https://huttag.up.railway.app/']
 
-CSRF_TRUSTED_ORIGINS = [ 'huttag.up.railway.app' ]
-SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-CSRF_COOKIE_SECURE = True
+# CSRF_TRUSTED_ORIGINS = [ 'huttag.up.railway.app' ]
+# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+# CSRF_COOKIE_SECURE = True
 
 INTERNAL_IPS = (
     '127.0.0.1',
