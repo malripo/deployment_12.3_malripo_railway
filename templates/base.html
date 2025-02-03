@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN804PV5XD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZN804PV5XD');
+    </script>
+    <meta name="google-site-verification" content="4SvBHYeOeRP4D_TzyywUc9FGUJMPcyYD1255q4a03iw" />
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for sitemap -->
+    <title>{% block title %}{% endblock %}TTugTTag</title>
+    <meta name="description" content="Image-sharing platform with rankings">
+    <meta name="keywords" content="Flickr, photo, image sharing, captions, ranking, social platform">
+    <meta name="author" content="Andreas Jud">
+
+    <meta property="og:url" content="http://{{ request.META.HTTP_HOST }}{{ request.path }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{% block og-caption %}TTugTTag{% endblock %}">
+    <meta property="og:description" content="{% block og-description %}Image-sharing platform with rankings{% endblock %}">
+    <meta property="og:image" content="{% block og-image %}http://{{ request.META.HTTP_HOST }}{% static 'images/ttugttag.jpg' %}{% endblock %}">
+    <meta name="twitter:image" content="{% block tw-image %}http://{{ request.META.HTTP_HOST }}{% static 'images/ttugttag_tw.jpg' %}{% endblock %}">
+
+    <!-- for page icon -->
+    <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/small/64/000000/fire-heart.png"/>
+    <!-- for google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!-- for alpinejs -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- for htmx -->
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <!-- for hyperscript -->
+    <script src="https://unpkg.com/hyperscript.org@0.9.13"></script>
+    <!-- for tailwindcss -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% if debug %}{% static 'css/style.css' %} {% else %}{% static 'css/style.min.css' %}{% endif %}">
+    
+</head>
+<!-- <body class="bg-gray-100"> -->
+<body class="bg-pink-500">
+<!-- <body class="bg-teal-500"> -->
+
+{% include 'includes/messages.html' %}
+    
+{% include 'includes/header.html' %}
+
+{% block layout %}
+{% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'a_landingpages/base.html' %}
+
+{% block content %}
+    <form method='POST' class="flex items-center mt-56 max-w-[20rem] mx-auto">
+        {% csrf_token %}
+        <!-- <input type="password" name="password" placeholder="Enter access code" required> -->
+         {{ form }}
+        <button class="xl-2 !py-[1.1rem] !px-6" type="submit">Go</button>
+    </form>
+{% endblock %}
